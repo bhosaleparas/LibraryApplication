@@ -85,9 +85,22 @@ CREATE DATABASE library_db;
 ### 3. Configuration
 Update `src/main/resources/application.properties` with your PostgreSQL credentials:
 ```properties
+
+# Database Configuration
 spring.datasource.url=jdbc:postgresql://localhost:5432/library_db
-spring.datasource.username=your_username
-spring.datasource.password=your_password
+spring.datasource.username=username
+spring.datasource.password=password
+
+# JPA/Hibernate Configuration
+spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.PostgreSQLDialect
+spring.jpa.hibernate.ddl-auto=update
+spring.jpa.show-sql=true
+spring.jpa.properties.hibernate.format_sql=true
+
+# Logging
+logging.level.org.springframework=INFO
+logging.level.com.library=DEBUG
+
 ```
 
 ### 4. Build and Run
