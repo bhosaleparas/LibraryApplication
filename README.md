@@ -106,7 +106,7 @@ logging.level.com.library=DEBUG
 ### 4. Build and Run
 ```bash
 # Clone the project (if applicable)
-git clone <repository-url>
+git clone https://github.com/bhosaleparas/LibraryApplication.git
 cd library-api
 
 # Build the project
