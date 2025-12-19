@@ -23,8 +23,10 @@ public class User {
     private List<BorrowRecord> borrowRecords = new ArrayList<>();
 
     // Constructors
+    //no args
     public User() {}
 
+    //alll args
     public User(Long id, String name, String email) {
         this.id = id;
         this.name = name;

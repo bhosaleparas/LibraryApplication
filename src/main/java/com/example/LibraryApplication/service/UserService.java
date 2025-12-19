@@ -1,7 +1,6 @@
 package com.example.LibraryApplication.service;
 
 
-
 import com.example.LibraryApplication.dto.UserDTO;
 import com.example.LibraryApplication.entity.User;
 import com.example.LibraryApplication.repository.UserRepository;
@@ -50,6 +49,7 @@ public class UserService {
 
 
 
+
     public UserDTO updateUser(Long id, UserDTO userDTO) {
         User user = userRepository.findById(id)
                 .orElseThrow(() -> new RuntimeException("User not found"));
@@ -63,12 +63,14 @@ public class UserService {
 
 
 
+
     public void deleteUser(Long id) {
         if (!userRepository.existsById(id)) {
             throw new RuntimeException("User not found");
         }
         userRepository.deleteById(id);
     }
+
 
 
 

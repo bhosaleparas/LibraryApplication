@@ -20,13 +20,16 @@ public class BookService {
     private BookRepository bookRepository;
 
     public BookDTO createBook(BookDTO bookDTO) {
+
+
         Book book = new Book();
         book.setTitle(bookDTO.getTitle());
         book.setAuthor(bookDTO.getAuthor());
         book.setAvailable(bookDTO.isAvailable());
 
-        Book savedBook = bookRepository.save(book);
-        return convertToDTO(savedBook);
+        Book savedBook = bookRepository.save(book);  //saved in book table not bookdto it is book not bookdto
+
+        return convertToDTO(savedBook); //this converts to dto
     }
 
 

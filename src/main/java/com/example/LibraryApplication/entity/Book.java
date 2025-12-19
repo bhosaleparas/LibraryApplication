@@ -26,8 +26,10 @@ public class Book {
     private List<BorrowRecord> borrowRecords = new ArrayList<>();
 
     // Constructors
+    // No args constructor
     public Book() {}
 
+    //all args constructor
     public Book(Long id, String title, String author, boolean available) {
         this.id = id;
         this.title = title;
